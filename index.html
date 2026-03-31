@@ -14,7 +14,7 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 950px;
       margin: 0 auto;
       padding: 40px 20px;
     }
@@ -35,6 +35,7 @@
       text-decoration: none;
       color: black;
       cursor: pointer;
+      font-size: 1rem;
     }
 
     nav a:hover {
@@ -54,27 +55,37 @@
       font-weight: normal;
       border-bottom: 1px solid #ddd;
       padding-bottom: 8px;
+      margin-bottom: 24px;
     }
 
     p {
       text-align: justify;
+      line-height: 1.7;
+      margin-bottom: 18px;
     }
 
-    /* Home Image */
+    .hero {
+      margin-top: 30px;
+      text-align: center;
+    }
+
     .hero img {
       width: 100%;
+      max-width: 900px;
       height: auto;
-      max-height: 350px;
+      max-height: 420px;
       object-fit: contain;
-      margin-top: 20px;
+      display: block;
+      margin: 0 auto;
     }
 
     /* Team */
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px 28px;
       margin-top: 20px;
+      align-items: start;
     }
 
     .member {
@@ -82,10 +93,37 @@
     }
 
     .member img {
-      width: 140px;
-      height: 140px;
+      width: 180px;
+      height: 180px;
       object-fit: cover;
-      border-radius: 4px;
+      border-radius: 6px;
+      display: block;
+      margin: 0 auto 12px auto;
+    }
+
+    .member p {
+      text-align: center;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .member .name {
+      font-size: 1rem;
+    }
+
+    ul.publications {
+      padding-left: 22px;
+      line-height: 1.7;
+    }
+
+    ul.publications li {
+      margin-bottom: 14px;
+      text-align: justify;
+    }
+
+    .news-list {
+      padding-left: 22px;
+      line-height: 1.7;
     }
 
     footer {
@@ -97,6 +135,27 @@
       padding-top: 20px;
     }
 
+    @media (max-width: 900px) {
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .member img {
+        width: 170px;
+        height: 170px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px 8px;
+      }
+    }
   </style>
 </head>
 
@@ -134,7 +193,7 @@
       </p>
 
       <div class="hero">
-        <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Bilder/include.png" alt="Lab Image">
+        <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Bilder/include.png" alt="INCLUDE project image">
       </div>
     </section>
 
@@ -144,66 +203,53 @@
 
       <div class="team-grid">
         <div class="member">
-          <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Website/Team_Bilder/AndreaHahnefeld.jpg" alt="Person">
-          <p>Dr. Andrea Hahnefeld</p>
-        </div>
-        
-        <div class="member">
-          <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Website/Team_Bilder/MatthiasKlosinski.jpg0" alt="Person">
-          <p>Prof. Dr. Matthias Klosinski</p>
-        </div>
-
-
-        <div class="member">
-          <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Bilder/Profilbild_Elena.jpg" alt="Person">
-          <p>Elena Weigand</p>
+          <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Website/Team_Bilder/AndreaHahnefeld.jpg" alt="Dr. Andrea Hahnefeld">
+          <p class="name">Dr. Andrea Hahnefeld</p>
         </div>
 
         <div class="member">
-          <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Website/Team_Bilder/LenaStreckert.jpg" alt="Person">
-          <p>Lena Streckert</p>
+          <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Website/Team_Bilder/MatthiasKlosinski.jpg" alt="Prof. Dr. Matthias Klosinski">
+          <p class="name">Prof. Dr. Matthias Klosinski</p>
         </div>
-      </div>
-    </section>
 
-    <div class="member">
-          <img src="https://via.placeholder.com/150" alt="Person">
-          <p>Elena Hauber</p>
+        <div class="member">
+          <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Bilder/Profilbild_Elena.jpg" alt="Elena Weigand">
+          <p class="name">Elena Weigand</p>
         </div>
-      </div>
-    </section>
 
-  <div class="member">
-          <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Website/Team_Bilder/FranziskaNegele.jpg" alt="Person">
-          <p>Franziska Negele</p>
+        <div class="member">
+          <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Website/Team_Bilder/LenaStreckert.jpg" alt="Lena Streckert">
+          <p class="name">Lena Streckert</p>
         </div>
-      </div>
-    </section>
-  
-<div class="member">
-          <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Website/Team_Bilder/BerfinDemirkol.jpeg" alt="Person">
-          <p>Berfin Demirkol</p>
-        </div>
-      </div>
-    </section>
 
-  <div class="member">
-          <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Website/Team_Bilder/VerenaDudek.jpg" alt="Person">
-          <p>Verena Dudek</p>
+        <div class="member">
+          <img src="https://via.placeholder.com/180" alt="Elena Hauber">
+          <p class="name">Elena Hauber</p>
         </div>
-      </div>
-    </section>
 
-  <div class="member">
-          <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Website/Team_Bilder/SaskiaLeBeherec.png" alt="Person">
-          <p>Saskia Le Beherec</p>
+        <div class="member">
+          <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Website/Team_Bilder/FranziskaNegele.jpg" alt="Franziska Negele">
+          <p class="name">Franziska Negele</p>
         </div>
-      </div>
-    </section>
 
-  <div class="member">
-          <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Bilder/Marco_Fav.jpeg" alt="Person">
-          <p>Marco Gassner</p>
+        <div class="member">
+          <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Website/Team_Bilder/BerfinDemirkol.jpeg" alt="Berfin Demirkol">
+          <p class="name">Berfin Demirkol</p>
+        </div>
+
+        <div class="member">
+          <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Website/Team_Bilder/VerenaDudek.jpg" alt="Verena Dudek">
+          <p class="name">Verena Dudek</p>
+        </div>
+
+        <div class="member">
+          <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Website/Team_Bilder/SaskiaLeBeherec.png" alt="Saskia Le Beherec">
+          <p class="name">Saskia Le Beherec</p>
+        </div>
+
+        <div class="member">
+          <img src="https://baseresourcesstack-documentsbucket9ec9deb9-qmmkdw8bfxhu.s3.eu-central-1.amazonaws.com/public/videos/Bilder/Marco_Fav.jpeg" alt="Marco Gassner">
+          <p class="name">Marco Gassner</p>
         </div>
       </div>
     </section>
@@ -211,22 +257,29 @@
     <!-- RESEARCH -->
     <section id="research">
       <h2>Research</h2>
+
       <p>Overview of research topics.</p>
+      <p>Selection of Publications.</p>
 
-       <p>Selection of Publications.</p>
+      <ul class="publications">
+        <li>Bernhardt K, Le Beherec S, Uppendahl JR, Fleischmann M, Klosinski M, Rivera LM, Samaras G, Kenney M, Müller R, Nehring I, Mall V, Hahnefeld A. Young children’s development after forced displacement: a systematic review. <em>Child Adolesc Psychiatry Ment Health.</em> 2024 Feb 1;18(1):20. doi: 10.1186/s13034-024-00711-5. PMID: 38303022; PMCID: PMC10835848.</li>
 
-- Bernhardt K, Le Beherec S, Uppendahl JR, Fleischmann M, Klosinski M, Rivera LM, Samaras G, Kenney M, Müller R, Nehring I, Mall V, Hahnefeld A. Young children’s development after forced displacement: a systematic review. Child Adolesc Psychiatry Ment Health. 2024 Feb 1;18(1):20. doi: 10.1186/s13034-024-00711-5. PMID: 38303022; PMCID: PMC10835848.
-- Hahnefeld A, Fink M, Le Beherec S, Baur MA, Bernhardt K, Mall V. Correlation of screen exposure to stress, learning, cognitive and language performance in children. Eur Child Adolesc Psychiatry. 2025 May;34(5):1615-1624. doi: 10.1007/s00787-024-02593-6. Epub 2024 Oct 23. Erratum in: Eur Child Adolesc Psychiatry. 2025 May;34(5):1625. doi: 10.1007/s00787-024-02625-1. PMID: 39443365; PMCID: PMC12122617.
-- Hahnefeld A, Fink M, Hauber E, Le Beherec S, Gassner M, Klosinski M, Mall V. Dysregulated Screen Exposure Is Associated With Severity of Language and Communication Impairments in Children With Developmental Disorders. Acta Paediatr. 2025 Jul 18. doi: 10.1111/apa.70223. Epub ahead of print. PMID: 40682221.
-- Bernhardt, K., Le Beherec, S., Uppendahl, J., Baur, M.-A., Klosinski, M., Mall, V. & Hahnefeld, A. (2023). Exploring Mental Health and Development in Refugee Children Through Systematic Play Assessment. Child Psychiatry & Human Development. https://doi.org/10.1007/s10578-023-01584-z
-- Hahnefeld, A., Sukale, T., Weigand, E., Dudek, V., Münch, K., Aberl, S., Eckler, L. V., Nehring, I., Friedmann, A., Plener, P. L., Fegert, J. M., & Mall, V. (2022). Non-verbal cognitive development, learning, and symptoms of PTSD in 3- to 6-year-old refugee children. European journal of pediatrics, 181(3), 1205–1212. https://doi.org/10.1007/s00431-021-04312-8
-- Hahnefeld, A., Sukale, T., Weigand, E., Münch, K., Aberl, S., Eckler, L. V., Schmidt, D., Friedmann, A., Plener, P. L., Fegert, J. M., & Mall, V. (2021). Survival states as indicators of learning performance and biological stress in refugee children: a cross-sectional study with a comparison group. BMC psychiatry, 21(1), 228. https://doi.org/10.1186/s12888-021-03233-y
+        <li>Hahnefeld A, Fink M, Le Beherec S, Baur MA, Bernhardt K, Mall V. Correlation of screen exposure to stress, learning, cognitive and language performance in children. <em>Eur Child Adolesc Psychiatry.</em> 2025 May;34(5):1615-1624. doi: 10.1007/s00787-024-02593-6. Epub 2024 Oct 23. Erratum in: <em>Eur Child Adolesc Psychiatry.</em> 2025 May;34(5):1625. doi: 10.1007/s00787-024-02625-1. PMID: 39443365; PMCID: PMC12122617.</li>
+
+        <li>Hahnefeld A, Fink M, Hauber E, Le Beherec S, Gassner M, Klosinski M, Mall V. Dysregulated Screen Exposure Is Associated With Severity of Language and Communication Impairments in Children With Developmental Disorders. <em>Acta Paediatr.</em> 2025 Jul 18. doi: 10.1111/apa.70223. Epub ahead of print. PMID: 40682221.</li>
+
+        <li>Bernhardt, K., Le Beherec, S., Uppendahl, J., Baur, M.-A., Klosinski, M., Mall, V. &amp; Hahnefeld, A. (2023). Exploring Mental Health and Development in Refugee Children Through Systematic Play Assessment. <em>Child Psychiatry &amp; Human Development.</em> https://doi.org/10.1007/s10578-023-01584-z</li>
+
+        <li>Hahnefeld, A., Sukale, T., Weigand, E., Dudek, V., Münch, K., Aberl, S., Eckler, L. V., Nehring, I., Friedmann, A., Plener, P. L., Fegert, J. M., &amp; Mall, V. (2022). Non-verbal cognitive development, learning, and symptoms of PTSD in 3- to 6-year-old refugee children. <em>European Journal of Pediatrics, 181</em>(3), 1205–1212. https://doi.org/10.1007/s00431-021-04312-8</li>
+
+        <li>Hahnefeld, A., Sukale, T., Weigand, E., Münch, K., Aberl, S., Eckler, L. V., Schmidt, D., Friedmann, A., Plener, P. L., Fegert, J. M., &amp; Mall, V. (2021). Survival states as indicators of learning performance and biological stress in refugee children: a cross-sectional study with a comparison group. <em>BMC Psychiatry, 21</em>(1), 228. https://doi.org/10.1186/s12888-021-03233-y</li>
+      </ul>
     </section>
 
     <!-- NEWS -->
     <section id="news">
       <h2>News</h2>
-      <ul>
+      <ul class="news-list">
         <li>News item</li>
         <li>News item</li>
       </ul>
@@ -245,6 +298,5 @@
       document.getElementById(id).classList.add("active");
     }
   </script>
-
 </body>
 </html>
